@@ -98,12 +98,13 @@ const mp4IsEnd = () => {
     var vid = document.getElementById("myVideo");
     var _current = Math.round(vid.currentTime);
     var _duration = Math.round(vid.duration);
+    console.log("_current " + _current + "_duration " +_duration);
     if (_current == _duration) {
       console.log("ended video type mp4");
       document.querySelector(".slick-next").click();
-      _current = 0;
-      console.log("reinitialiser _current video mp4 = ", _current);
+      console.log("reinitialiser _current video mp4 = ",  vid.currentTime);
       clearInterval(interval_video);
+      vid.currentTime = 0;
     }
   }, 1000);
 };
