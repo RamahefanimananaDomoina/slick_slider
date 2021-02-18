@@ -102,7 +102,6 @@ const mp4IsEnd = () => {
     if (_current == _duration) {
       console.log("ended video type mp4");
       document.querySelector(".slick-next").click();
-      console.log("reinitialiser _current video mp4 = ",  vid.currentTime);
       clearInterval(interval_video);
       vid.currentTime = 0;
     }
